@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertRC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertRCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertRCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateRC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateRCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateRCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletetRC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletetRCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletetRCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchRC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchRCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchRCResult" type="tns:RetailCenter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RetailCenter" />
+      <s:element name="insertShipItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="siid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="wei" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="dim" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amnt" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="dest" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="deli" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="rid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertShipItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertShipItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteShipItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteShipItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteShipItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertRCSoapIn">
+    <wsdl:part name="parameters" element="tns:insertRC" />
+  </wsdl:message>
+  <wsdl:message name="insertRCSoapOut">
+    <wsdl:part name="parameters" element="tns:insertRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateRCSoapIn">
+    <wsdl:part name="parameters" element="tns:updateRC" />
+  </wsdl:message>
+  <wsdl:message name="updateRCSoapOut">
+    <wsdl:part name="parameters" element="tns:updateRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletetRCSoapIn">
+    <wsdl:part name="parameters" element="tns:deletetRC" />
+  </wsdl:message>
+  <wsdl:message name="deletetRCSoapOut">
+    <wsdl:part name="parameters" element="tns:deletetRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchRCSoapIn">
+    <wsdl:part name="parameters" element="tns:searchRC" />
+  </wsdl:message>
+  <wsdl:message name="searchRCSoapOut">
+    <wsdl:part name="parameters" element="tns:searchRCResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertShipItemSoapIn">
+    <wsdl:part name="parameters" element="tns:insertShipItem" />
+  </wsdl:message>
+  <wsdl:message name="insertShipItemSoapOut">
+    <wsdl:part name="parameters" element="tns:insertShipItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteShipItemSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteShipItem" />
+  </wsdl:message>
+  <wsdl:message name="deleteShipItemSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteShipItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ABC_ShippingServiceSoap">
+    <wsdl:operation name="insertRC">
+      <wsdl:input message="tns:insertRCSoapIn" />
+      <wsdl:output message="tns:insertRCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRC">
+      <wsdl:input message="tns:updateRCSoapIn" />
+      <wsdl:output message="tns:updateRCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletetRC">
+      <wsdl:input message="tns:deletetRCSoapIn" />
+      <wsdl:output message="tns:deletetRCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchRC">
+      <wsdl:input message="tns:searchRCSoapIn" />
+      <wsdl:output message="tns:searchRCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertShipItem">
+      <wsdl:input message="tns:insertShipItemSoapIn" />
+      <wsdl:output message="tns:insertShipItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteShipItem">
+      <wsdl:input message="tns:deleteShipItemSoapIn" />
+      <wsdl:output message="tns:deleteShipItemSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ABC_ShippingServiceSoap" type="tns:ABC_ShippingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertRC">
+      <soap:operation soapAction="http://tempuri.org/insertRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRC">
+      <soap:operation soapAction="http://tempuri.org/updateRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletetRC">
+      <soap:operation soapAction="http://tempuri.org/deletetRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchRC">
+      <soap:operation soapAction="http://tempuri.org/searchRC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertShipItem">
+      <soap:operation soapAction="http://tempuri.org/insertShipItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteShipItem">
+      <soap:operation soapAction="http://tempuri.org/deleteShipItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ABC_ShippingServiceSoap12" type="tns:ABC_ShippingServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertRC">
+      <soap12:operation soapAction="http://tempuri.org/insertRC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRC">
+      <soap12:operation soapAction="http://tempuri.org/updateRC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletetRC">
+      <soap12:operation soapAction="http://tempuri.org/deletetRC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchRC">
+      <soap12:operation soapAction="http://tempuri.org/searchRC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertShipItem">
+      <soap12:operation soapAction="http://tempuri.org/insertShipItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteShipItem">
+      <soap12:operation soapAction="http://tempuri.org/deleteShipItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ABC_ShippingService">
+    <wsdl:port name="ABC_ShippingServiceSoap" binding="tns:ABC_ShippingServiceSoap">
+      <soap:address location="https://localhost:44325/ABC_ShippingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ABC_ShippingServiceSoap12" binding="tns:ABC_ShippingServiceSoap12">
+      <soap12:address location="https://localhost:44325/ABC_ShippingService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

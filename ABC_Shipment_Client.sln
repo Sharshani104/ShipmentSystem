@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABC_Shipment_Client", "ABC_Shipment_Client\ABC_Shipment_Client.csproj", "{8DBF9886-0028-439D-9D26-CB96876F7983}"
+	ProjectSection(ProjectDependencies) = postProject
+		{16AF7892-539A-4278-9D90-55E35FCEB51C} = {16AF7892-539A-4278-9D90-55E35FCEB51C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABC_Shipment_Server", "ABC_Shipment_Server\ABC_Shipment_Server.csproj", "{16AF7892-539A-4278-9D90-55E35FCEB51C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DBF9886-0028-439D-9D26-CB96876F7983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBF9886-0028-439D-9D26-CB96876F7983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBF9886-0028-439D-9D26-CB96876F7983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBF9886-0028-439D-9D26-CB96876F7983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AF7892-539A-4278-9D90-55E35FCEB51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16AF7892-539A-4278-9D90-55E35FCEB51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16AF7892-539A-4278-9D90-55E35FCEB51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16AF7892-539A-4278-9D90-55E35FCEB51C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE5F3085-19BA-469B-A16A-562F841030F3}
+	EndGlobalSection
+EndGlobal
